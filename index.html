@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Prompt</title>
+</head>
+<body>
+    <button id="startTaskBtn">Start Task</button>
+
+    <script>
+        document.getElementById('startTaskBtn').addEventListener('click', function() {
+            let confirmResult = confirm('Вы хотите решить задачу?');
+            if (confirmResult) {
+                let answer = prompt('Сколько будет 25 + 25?', '');
+                if (answer !== null && answer.trim() === '50') {
+                    alert('Правильно! Ответ 50.');
+                } else {
+                    alert('Неправильный ответ или отменено.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
